@@ -1,0 +1,112 @@
+.table.border-bottom {
+  thead th {
+    border-top: 1px solid $primary;
+  }
+
+  border-bottom-color: $primary !important;
+}
+
+.table {
+  color: inherit;
+
+  th {
+    font-weight: 400;
+    text-align: center;
+  }
+
+  th, td {
+    vertical-align: middle;
+  }
+
+  thead th {
+    color: $primary;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom-width: 1px;
+  }
+
+  &:not(.table-bordered) tbody {
+    tr:first-of-type {
+      th, td {
+        border-top: 1px solid $primary;
+      }
+    }
+
+    th {
+      color: #828790;
+      background-color: rgba(227, 231, 238, 0.5);
+    }
+  }
+
+  &.bg-white {
+
+    thead {
+      th {
+        border-bottom: 1px solid $primary !important;
+      }
+    }
+
+
+    th, td {
+      background-color: transparent;
+      border: 0 !important;
+    }
+  }
+}
+
+.text-danger {
+  .col-form-label {
+    color: #dc3545 !important;
+  }
+}
+.table-danger {
+  background-color: transparent !important;
+  th, td{
+    color: #dc3545;
+    //line-height: 3.5;
+    &.required {
+      font-weight: bold;
+      &::after{
+        content: '';
+      }
+    }
+  }
+  .btn-light {
+    background-color: transparent;
+    border-color: transparent;
+    color: #828790;
+  }
+}
+
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table-responsive {
+  .table {
+    min-width: 680px;
+  }
+}
+
+.table-p-0 {
+  th, td {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+.table-hover {
+  tr[tabindex] {
+    cursor: pointer;
+  }
+
+  tbody tr:hover {
+    color: inherit;
+    background-color: rgb(230, 239, 249);
+  }
+}
+
+.b-table-sticky-header>.table.b-table>thead>tr>th {
+  top: -1px;
+}

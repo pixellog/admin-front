@@ -1,0 +1,72 @@
+#main {
+  background-color: #17162d;
+  .card {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-sm;
+    border: 0;
+    background-color: #21203e;
+  }
+
+  h5 {
+    color: #fff !important;
+    font-size: 14px;
+  }
+  
+  .bg-primary, .footer {
+    background-color: #17162d !important;
+  }
+  
+  .table {
+    border-color: #34334f !important;
+    th, td {
+      background-color: transparent;
+      color: #6d7998;
+      border-color: #34334f;
+    }
+  }
+
+  .btn {
+    background-color: transparent;
+    border-color: #34334f;
+    color: #6d7998;
+  }
+
+  .material-icons {
+    border: 0;
+  }
+
+  .list-group-item {
+    background-color: transparent;
+  }
+
+  .text-primary, .text-purple {
+    color: #413adb !important;
+  }
+
+  .form-control, .custom-select {
+    padding-left: 0;
+    border-bottom-color: #34334f;
+    color: #6d7998;
+    &::placeholder {
+      color: #6d7998 !important;
+      font-size: 14px;
+    }
+  }
+  
+  .border-right{
+    border-color:#34334f !important
+  }
+  
+  .bg-purple {
+    background-color: #413adb !important;
+  }
+
+  .page-item .page-link {
+    color: #fff;
+    background-color: #21203e;
+    border-color: #34334f;
+    &:hover {
+      background-color: rgba(0,0,0,.2);
+    }
+  }
+}

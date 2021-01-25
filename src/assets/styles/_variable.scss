@@ -1,0 +1,396 @@
+// Define variable defaults
+$sizes: () !default;
+$sizes: map-merge(
+                (
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        33: 33%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        60: 60%,
+                        75: 75%,
+                        70: 70%,
+                        80: 80%,
+                        90: 90%,
+                        100: 100%,
+                        auto: auto
+                ),
+                $sizes
+);
+$primary: #111b5c;
+$purple: #7042e6;
+$info: #34a6e0;
+$light: #fff;
+$success: #37dbbe;
+$text-muted: #b4b8bf;
+$enable-rounded: false;
+$input-bg: transparentize(rgba(0, 0, 0, 0), 0);
+$input-border-radius: 0;
+$modal-backdrop-opacity: .6;
+$font-family-base: 'Spoqa Han Sans', 'Sans-serif';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index';
+// https://prismjs.com/
+@import '~prismjs/themes/prism';
+//@import '~prismjs/themes/prism-okaidia';
+//@import url(//fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background-color: #fff;
+  //background-color: #3c3d46;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: 13px;
+  color: #828790;
+}
+
+.modal-backdrop {
+  opacity: $modal-backdrop-opacity;
+}
+
+
+.modal-xl {
+  max-width: 1200px;
+}
+
+
+$bg-base: #f2f5fa;
+
+$widths: (
+        10 : 10%,
+        15 : 15%,
+        20 : 20%,
+        30 : 30%,
+        33 : 33.33%,
+        35 : 35%,
+        40 : 40%,
+        60 : 60%,
+        70 : 70%,
+        80 : 80%,
+        90 : 90%,
+);
+
+@each $key, $val in $widths {
+  .w-#{$key} {
+    width: $val !important;
+  }
+}
+
+@mixin icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-size: 1px;
+  line-height: inherit;
+  margin-right: 4px;
+}
+
+body {
+  color: #828790;
+  background-color: $bg-base;
+}
+
+.form-control {
+  border-width: 0 0 1px;
+  appearance: none;
+}
+
+.custom-select {
+  border-radius: 0;
+  border-width: 0 0 1px;
+}
+
+label.required {
+  justify-content: start;
+  padding-left: 0;
+  color: $primary;
+  //font-weight: bold;
+
+  &::after {
+    content: '*';
+    color: #f00;
+  }
+}
+
+th.required, div.required {
+  color: $primary;
+  font-weight: bold;
+
+  &::after {
+    content: '*';
+    color: #f00;
+  }
+}
+
+.text-purple {
+  color: $purple;
+}
+
+.no-data {
+  padding: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: $primary;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+}
+
+.pagination {
+  .page-link {
+    border-radius: 0 !important;
+  }
+}
+
+h5.text-primary {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.line-dotted {
+  border-top: 1px dotted #ccd1dc;
+  margin: 40px 0;
+}
+
+
+.custom-checkbox .custom-control-label::before {
+  border-radius: 0;
+}
+
+.bg-muted {
+  background-color: #e3e7ee !important;
+}
+
+.btn {
+  font-size: 16px;
+
+  .material-icons {
+    font-size: inherit;
+    margin-top: 5px;
+  }
+}
+
+.b-toaster-top-center {
+  top: 45vh !important;
+}
+
+
+.btn-arrow {
+  text-align: left;
+  padding-left: 15px !important;
+
+  &::after {
+    content: 'navigate_next';
+    display: inline-block;
+    float: right;
+    font-family: 'Material Icons';
+  }
+}
+
+.btn-sm {
+  font-size: .82rem;
+}
+
+.small {
+  .form-control, .custom-select {
+    font-size: .82rem;
+  }
+}
+
+.material-icons {
+  font-size: 1rem;
+}
+
+.pagination {
+  margin-bottom: 0;
+}
+
+.border-dotted {
+  border-top: 1px dashed $border-color;
+  margin: 40px 0;
+}
+
+h6.input {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border-bottom-color: $bg-base;
+  background-color: transparent;
+}
+
+
+.text-pre {
+  white-space: pre;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+
+.card-primary {
+  border: 0;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+
+  label {
+    &:not(.btn) {
+      font-weight: bold;
+      color: $primary;
+      //padding-left: 1rem;
+    }
+
+    &.btn {
+      color: #828790;
+      border: solid 1px rgb(204, 209, 219);
+
+      &.active {
+        border-color: rgba(17, 27, 92, 0.5) !important;
+        background-color: rgba(17, 27, 92, 0.5) !important;
+      }
+    }
+  }
+
+  .form-row {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    align-items: flex-end;
+    margin-top: .75rem;
+  }
+}
+
+form.small, form.primary {
+  .form-row {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    padding-top: .2rem;
+
+    &:not(.custom-control-label) {
+      font-weight: bold;
+      color: #111b5c;
+    }
+
+    &.text-right {
+      padding-right: 1rem;
+    }
+  }
+
+  [type="checkbox"] + .custom-control-label {
+    padding: 0;
+    font-weight: 400;
+  }
+}
+
+input.won {
+  text-align: right;
+}
+
+.won {
+  display: flex;
+
+  &::after {
+    content: '원';
+    display: inline-block;
+    padding-top: 7px;
+    padding-left: 10px;
+  }
+
+  input {
+    text-align: right;
+  }
+}
+
+.card {
+  .row {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding: .5rem 1.25rem;
+  }
+}
+
+
+.dot {
+  & > li::before {
+    @include icons;
+    content: 'navigate_next';
+  }
+}
+
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #fff;
+}
+
+.autosuggest__results {
+  position: absolute;
+  width: 191px;
+  z-index: 9999;
+  background-color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 150px;
+  border: 1px solid $border-color;
+
+  ul {
+    @extend .list-unstyled;
+
+    li {
+      padding: .5rem;
+
+      &:active,
+      &:focus,
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(51, 217, 178, 0.2);
+      }
+    }
+  }
+
+  .autosuggest__results-item--highlighted {
+    background-color: rgba(51, 217, 178, 0.2);
+  }
+}
+
+.form-control[readonly] {
+  //background-color: transparent;
+  border-color: transparent;
+
+  &:focus {
+  }
+}
+
+th {
+  &[tabindex] {
+    cursor: pointer;
+  }
+
+  .material-icons {
+    vertical-align: top;
+  }
+}
+
+.outline-0 {
+  outline: none !important;
+}

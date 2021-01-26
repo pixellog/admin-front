@@ -38,7 +38,7 @@
     </b-table>
 
     <div class="form-inline">
-      <b-button class="btn btn-primary ml-auto">패키지 등록</b-button>
+      <b-button variant="primary" size="lg" class="col-lg-auto ml-auto">패키지 등록</b-button>
     </div>
   </div>
 </template>

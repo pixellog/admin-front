@@ -1,6 +1,5 @@
 <template>
-  <div class="container-fluid text-left py-5">
-    <h5>패키지 상품 등록</h5>
+  <sub-layout>
     <h6>기본정보</h6>
     <b-alert show variant="light" class="border py-4">
       <form action="">
@@ -24,7 +23,7 @@
 
           <div class="col-lg-2 col-form-label required">카테고리</div>
           <div class="col-lg-10">
-            <b-form-select style="width: 120px;" :value="0" :key="item" :options="Object.assign({},['선택','개인','법인','공통'])"></b-form-select>
+            <b-form-select style="width: 120px;" :value="0" :options="Object.assign({},['선택','개인','법인','공통'])"></b-form-select>
           </div>
 
           <div class="col-lg-2 col-form-label required">패키지명</div>
@@ -79,13 +78,11 @@
             <div class="col-auto" style="width: 76px;">특징 {{ item }}</div>
             <div class="col d-flex">
               <b-form-input class="flex-grow-1" placeholder="최대 10자" v-model="text" :state="text.length <= 10"></b-form-input>
-              <!--              <div style="width: 50px;" class="ml-3 text-info small">{{ text.length }} 자</div>-->
             </div>
             <div class="w-100"></div>
             <div class="col-auto" style="width: 76px;">상세</div>
             <div class="col d-flex">
               <b-form-textarea class="flex-grow-1" placeholder="최대 31자" v-model="text" :state="text.length <= 31"></b-form-textarea>
-              <!--              <div style="width: 50px;" class="ml-3 text-info small">{{ text.length }} 자</div>-->
             </div>
           </b-row>
         </div>
@@ -116,13 +113,11 @@
           <div class="col-auto">제목</div>
           <div class="col d-flex">
             <b-form-input class="flex-grow-1 mr-3" placeholder="최대 10자" v-model="text" :state="text.length <= 10"></b-form-input>
-            <!--            <div style="width: 50px;" class="text-info small">0 자</div>-->
           </div>
           <div class="w-100 mt-2"></div>
           <div class="col-auto">내용</div>
           <div class="col d-flex">
             <b-form-textarea class="flex-grow-1 mr-3" placeholder="최대 31자" v-model="text" :state="text.length <= 31" rows="5"></b-form-textarea>
-            <!--            <div style="width: 50px;" class="text-info small">0 자</div>-->
           </div>
         </b-row>
       </div>
@@ -199,11 +194,14 @@
       <b-button size="lg" variant="secondary" class="ml-2">취소</b-button>
       <b-button size="lg" variant="primary" class="ml-2" href="https://codef.io/#/service/package/view/P000002" target="_blank">미리보기</b-button>
     </div>
-  </div>
+  </sub-layout>
 </template>
 
 <script>
+import SubLayout from "@/layout/sub-layout";
 export default {
+  name: 'PackageRegist',
+  components: {SubLayout},
   data() {
     return {
       selected: 1,

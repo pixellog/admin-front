@@ -99,6 +99,10 @@ $widths: (
   margin-right: 4px;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   color: #828790;
   background-color: $bg-base;

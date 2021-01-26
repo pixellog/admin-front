@@ -1,7 +1,5 @@
 <template>
-  <div class="container-fluid text-left">
-    <h5>패키지 상품 관리</h5>
-
+  <sub-layout>
     <b-alert show variant="light" class="border py-4">
       <form action="">
         <div class="form-inline">
@@ -40,10 +38,11 @@
     <div class="form-inline">
       <b-button variant="primary" size="lg" class="col-lg-auto ml-auto">패키지 등록</b-button>
     </div>
-  </div>
+  </sub-layout>
 </template>
 
 <script>
+import SubLayout from "@/layout/sub-layout";
 const items = [
   {
     코드: 'P000001',
@@ -77,6 +76,8 @@ const items = [
   }
 ];
 export default {
+  name: 'PackageList',
+  components: {SubLayout},
   data() {
     return {
       totalRows: 1,
